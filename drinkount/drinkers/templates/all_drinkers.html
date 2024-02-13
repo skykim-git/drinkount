@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My drinkers - List of all drinkers
+{% endblock %}
+
+
+{% block content %}
+
+  <p><a href="/">HOME</a></p>
+
+
+  <h1>Drinkers</h1>
+  
+  <ul>
+    {% for x in mydrinkers %}
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
